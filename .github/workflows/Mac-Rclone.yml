@@ -81,7 +81,7 @@ jobs:
       - name: rclone copy
         if: steps.downloading.outputs.filename != '' && !cancelled() && !failure()
         run: |
-          rclone copy ${{ steps.downloading.outputs.path }} aly:/${{ steps.downloading.outputs.folder }} 
+          rclone copy ${{ steps.downloading.outputs.path }} bd:/${{ steps.downloading.outputs.folder }} 
       
       - name: Save Data
         id:  database
